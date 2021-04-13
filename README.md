@@ -2,13 +2,13 @@
 
 > Easy OpenVPN allows you to hassel-free setup an OpenVPN server using Docker with a single command.
 
-## Installation
+### Installation
 ```
 $ curl -sSL https://raw.githubusercontent.com/tuladhar/easy-openvpn/main/easy-openvpn.sh > easy-openvpn.sh
 $ chmod +x easy-openvpn.sh
 ```
 
-## Easy OpenVPN Installation
+### Easy OpenVPN Installation
 
 **NOTE:**
 * `ENDPOINT` can be an IP address or domain name of the openvpn server.
@@ -18,7 +18,7 @@ $ chmod +x easy-openvpn.sh
 $ ./easy-openvpn.sh --name example --endpoint ENDPOINT
 ```
 
-## Generate Client Configuration
+### Generate Client Configuration
 
 ```
 $ ./easy-openvpn.sh --client client1
