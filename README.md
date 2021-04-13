@@ -1,3 +1,5 @@
+![](easy-openvpn.png)
+
 > Easy OpenVPN allows you to hassel-free setup an OpenVPN server using Docker with a single command.
 
 ## Installation
@@ -27,3 +29,4 @@ $ ./easy-openvpn.sh --client client3
 ## Powered By
 * https://openvpn.net/
 * https://www.docker.com/
+* https://github.com/kylemanna/docker-openvpn
