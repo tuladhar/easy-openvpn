@@ -1,4 +1,6 @@
-Easy OpenVPN allows you to hassel-free setup an OpenVPN server using Docker with a single command.
+## Introduction
+
+> Easy OpenVPN allows you to hassel-free setup an OpenVPN server using Docker with a single command.
 
 ## Installation
 ```
