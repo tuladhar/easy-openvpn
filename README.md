@@ -4,7 +4,7 @@
 
 ## Installation
 ```
-$ curl -sSL https://raw.githubusercontent.com/tuladhar/easy-openvpn/main/easy-openvpn.sh > easy-openvpn.sh
+$ curl -fsSLO https://raw.githubusercontent.com/tuladhar/easy-openvpn/main/easy-openvpn.sh
 $ chmod +x easy-openvpn.sh
 ```
 
