@@ -41,12 +41,6 @@ function generate_client_config {
 	exit 0
 }
 
-function main {
-	install_docker
-	init_openvpn
-	install_openvpn_systemd	
-}
-
 flags=(
     "name"
     "endpoint"
@@ -93,4 +87,8 @@ if [[ -z $NAME || -z $OPENVPN_ENDPOINT ]]; then
 	exit 1
 fi
 
-main
+
+install_docker
+init_openvpn
+install_openvpn_systemd	
+
