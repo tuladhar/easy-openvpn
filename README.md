@@ -30,3 +30,6 @@ $ ./easy-openvpn.sh --name example --client client3
 * https://openvpn.net/
 * https://www.docker.com/
 * https://github.com/kylemanna/docker-openvpn
+
+## Thanks
+- [andreipetrescu95](https://github.com/andreipetrescu95)
