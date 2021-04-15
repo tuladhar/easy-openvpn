@@ -15,20 +15,21 @@ CLIENT=
 OVPN_DATA="ovpn-data"
 
 function install_docker {
-	which docker > /dev/null && return
+#	which docker > /dev/null && return
 	curl -fsSL https://get.docker.com -o get-docker.sh
 	sudo sh get-docker.sh
 }
 
 function init_openvpn {
-	sudo docker volume inspect $OVPN_DATA > /dev/null && return
+#	sudo docker volume inspect $OVPN_DATA > /dev/null && return
 	sudo docker volume create --name $OVPN_DATA
 	sudo docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://$OPENVPN_ENDPOINT
 	sudo docker run -v $OVPN_DATA:/etc/openvpn --rm -it -e "EASYRSA_BATCH=1" -e "EASYRSA_REQ_CN=CA" kylemanna/openvpn ovpn_initpki nopass
 }
 
 function install_openvpn_systemd {
-	[ -f /etc/systemd/system/docker-openvpn@$NAME.service ] && return
+#	[ -f /etc/systemd/system/docker-openvpn@$NAME.service ] && return
+# is-active?
 	curl -L https://raw.githubusercontent.com/kylemanna/docker-openvpn/master/init/docker-openvpn%40.service | sudo tee /etc/systemd/system/docker-openvpn@$NAME.service
 	sudo systemctl enable --now docker-openvpn@$NAME.service
 	sudo systemctl status docker-openvpn@$NAME.service
