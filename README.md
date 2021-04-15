@@ -21,9 +21,9 @@ $ ./easy-openvpn.sh --name example --endpoint ENDPOINT
 ## Generate Client Configuration
 
 ```
-$ ./easy-openvpn.sh --client client1
-$ ./easy-openvpn.sh --client client2
-$ ./easy-openvpn.sh --client client3
+$ ./easy-openvpn.sh --name example --client client1
+$ ./easy-openvpn.sh --name example --client client2
+$ ./easy-openvpn.sh --name example --client client3
 ```
 
 ## Powered By
