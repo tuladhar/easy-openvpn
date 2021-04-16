@@ -1,7 +1,8 @@
 name: Release Published
 
 on:
-  release: [published]
+  release:
+    types: [published]
  
 jobs:
   job1:
