@@ -1,0 +1,13 @@
+name: Release Published
+
+on:
+  release: [published]
+ 
+jobs:
+  job1:
+    name: Job1
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo job1
+      
