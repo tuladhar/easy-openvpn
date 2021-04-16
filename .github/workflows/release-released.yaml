@@ -12,4 +12,6 @@ jobs:
     steps:
       - env:
           RELEASE: ${{ env.GITHUB_REF }}
-        run: echo RELEASE=$RELEASE
+        run: |
+          echo RELEASE=$RELEASE
+          env
