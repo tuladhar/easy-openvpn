@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: echo release
         run: echo RELEASE='${{ github.run_id }}'
+
+      - name: echo sha
+        run: echo SHA='${{ github.sha }}'
