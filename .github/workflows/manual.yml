@@ -1,0 +1,14 @@
+name: 'Manual release (on-demand)'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  manual-release:
+    name: manual release
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: echo release
+        run: echo RELEASE='${{ github.run_id }}'
