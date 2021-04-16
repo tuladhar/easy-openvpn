@@ -10,8 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: get release tag
+        id: release_tag
+        run: echo ::set-output name=RELEASE_TAG::${GITHUB_REF/refs\/tags\//}
+
       - env:
-          RELEASE: ${{ env.GITHUB_REF }}
+          RELEASE: ${{ steps.release_tag.outputs.RELEASE_TAG }}
         run: |
           echo RELEASE=$RELEASE
           env
