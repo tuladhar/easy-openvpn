@@ -10,4 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: echo job1
+      - env:
+          RELEASE: ${{ env.GITHUB_REF }}
+        run: echo RELEASE=$RELEASE
