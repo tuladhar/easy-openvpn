@@ -2,12 +2,8 @@
 # Author: Puru Tuladhar
 # GitHub: http://github.com/tuladhar/easy-openvpn
 
-set -e
-set -o pipefail
+set -eo pipefail
 
-#########
-# INPUT #
-#########
 NAME=
 OPENVPN_ENDPOINT=
 CLIENT=
@@ -98,3 +94,4 @@ install_docker
 init_openvpn
 install_openvpn_systemd	
 
+exit 0
